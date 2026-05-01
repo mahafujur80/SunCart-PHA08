@@ -1,10 +1,6 @@
 import Image from 'next/image';
-import React from 'react';
-import Marquee from 'react-fast-marquee';
 import logo1 from '@/assets/brands/brandLogo1.jpg'
 import logo2 from '@/assets/brands/brandLogo2.jpg'
-import logo3 from '@/assets/brands/brandLogo3.jpg'
-import logo4 from '@/assets/brands/brandLogo4.jpg'
 import logo5 from '@/assets/brands/brandLogo5.jpg'
 import logo6 from '@/assets/brands/brandLogo6.jpg'
 

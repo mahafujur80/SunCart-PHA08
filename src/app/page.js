@@ -6,7 +6,7 @@ import SummerCareTips from "@/components/Homepage/SummerCareTips/SummerCareTips"
 
 export default function Home() {
   return (
-    <div>
+    <div className="max-w-5xl mx-auto">
       <Banner />
       <PopularProducts />
       <SummerCareTips />

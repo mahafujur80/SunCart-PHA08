@@ -1,17 +1,6 @@
 import React from 'react';
 
 const SummerCareCard = ({careTips}) => {
-//   const hydrationData = {
-//     title: "Hydration Tips",
-//     icon: "💧",
-//     tips: [
-//       { icon: "🥤", text: "Drink 2–3L Water Daily" },
-//       { icon: "🍉", text: "Eat Water-rich Foods" },
-//       { icon: "🧃", text: "Avoid Sugary Drinks" },
-//       { icon: "🧂", text: "Electrolytes Intake" }
-//     ]
-//   };
-
 
     return (
         <div className='shadow-lg p-3 bg-gradient-to-r from-blue-100 to-blue-300 rounded-xl animate__animated animate__fadeInUp animate__slow'>

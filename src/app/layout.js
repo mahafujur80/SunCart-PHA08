@@ -1,5 +1,6 @@
 import {Outfit } from "next/font/google";
 import "./globals.css";
+import 'animate.css';
 import NavBar from "../components/NavBar/NavBar";
 import Footer from "@/components/Footer/Footer";
 
@@ -22,7 +23,7 @@ export default function RootLayout({ children }) {
     >
       <body className="min-h-full flex flex-col bg-background/70 backdrop-blur-lg">
         <NavBar/>
-        <main className="max-w-5xl mx-auto ">
+        <main>
           {children}
         </main>
         <Footer/>
