@@ -5,10 +5,10 @@ import { IoIosStar } from 'react-icons/io';
 
 const ProductCard = ({product}) => {
     return (
-        <div className='border rounded-xl p-4 animate__animated animate__fadeInUp animate__slow'>
-            <div>
+        <div className='border rounded-xl p-4 animate__animated animate__zoomInDown animate__slow'>
+            <div className='h-40'>
                 <Image src={product.image} alt={product.name} width={200} height={200}
-                className='w-full rounded-xl object-cover'                              
+                className='w-full h-full rounded-xl object-cover'                              
                 />
             
             </div>

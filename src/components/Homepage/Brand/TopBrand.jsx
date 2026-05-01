@@ -9,39 +9,35 @@ import logo5 from '@/assets/brands/brandLogo5.jpg'
 import logo6 from '@/assets/brands/brandLogo6.jpg'
 
 const TopBrand = () => {
+    const brands = [
+  { name: "ADIDAS", logo: logo1 },
+  { name: "NEVIEA", logo: logo2 },
+  { name: "PUMA", logo: logo6 },
+  { name: "NIKE", logo: logo5 },
+];
     return (
-        <div className='my-10 space-y-5'>
-            <h1 className="text-2xl font-black text-center animate__animated animate__fadeInUp animate__delay-1s"><span className='text-blue-500'>Top</span> Brands</h1>
-            <div className="h-28  flex">
-                <Marquee pauseOnHover>
+       <div className="my-10 space-y-5">
 
-                    <div className="flex  items-center justify-center h-20 w-40 ">
-                        <Image src={logo1} alt="brand-logo " width={100} height={70} />
-                    </div>
+  <h1 className="text-lg md:text-2xl font-black text-center">
+    <span className="text-blue-500">Top</span> Brands
+  </h1>
 
-                    <div className=" flex  items-center justify-center h-24 w-40 ">
-                        <Image src={logo2} alt="brand-logo" width={100} height={100} />
-                    </div>
+  <div className="grid grid-cols-2 md:grid-cols-4 gap-y-3">
 
-                    <div className=" flex  items-center justify-center h-24 w-40 ">
-                        <Image src={logo3} alt="brand-logo" className='' width={100} height={100} />
-                    </div>
-
-                    <div className=" flex  items-center justify-center h-24 w-40 ">
-                        <Image src={logo4} alt="brand-logo" width={100} height={100} />
-                    </div>
-
-                    <div className=" flex  items-center justify-center h-24 w-40 ">
-                        <Image src={logo5} alt="brand-logo" width={100} height={100} />
-                    </div>
-
-                    <div className=" flex  items-center justify-center h-24 w-40 ">
-                        <Image src={logo6} alt="brand-logo" width={100} height={100} />
-                    </div>
-
-                </Marquee>
-            </div>
+      {brands.map((brand, i) => (
+        <div
+          key={i}
+          className="flex justify-center flex-col items-center animate__animated animate__zoomInDown mx-2 bg-white rounded-lg shadow p-2">
+          <div className="w-38 h-25 flex items-center justify-center">
+            <p><Image src={brand.logo} alt={brand.name} width={100} height={80} className="object-contain h-full "/></p>
+          </div>
+          <p className="text-center text-xs sm:text-sm md:text-base text-blue-500">
+            {brand.name}
+          </p>
         </div>
+      ))}
+  </div>
+</div>
     );
 };
 

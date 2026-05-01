@@ -6,11 +6,11 @@ import SummerCareTips from "@/components/Homepage/SummerCareTips/SummerCareTips"
 
 export default function Home() {
   return (
-   <div>
-        <Banner/>
-       <PopularProducts/>
-        <SummerCareTips/>
-        <TopBrand/>
-   </div>
+    <div>
+      <Banner />
+      <PopularProducts />
+      <SummerCareTips />
+      <TopBrand />
+    </div>
   );
 }
