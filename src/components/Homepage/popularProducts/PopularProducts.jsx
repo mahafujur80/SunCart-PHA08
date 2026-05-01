@@ -7,7 +7,7 @@ const PopularProducts = async() => {
   
     return (
         <div className="py-10 space-y-5">
-            <h1 className="md:text-xl lg:text-2xl font-black text-center" >Popular <span className="text-blue-500">Products</span></h1>
+            <h1 className="md:text-xl lg:text-2xl font-black text-center animate__animated animate__fadeInUp animate__delay-1s" >Popular <span className="text-blue-500">Products</span></h1>
             <div className="grid max-md:grid-cols-2 grid-cols-3 gap-5"> 
                 {
                  products.slice(0,3).map(product =><ProductCard key={product.id} product={product}/>)

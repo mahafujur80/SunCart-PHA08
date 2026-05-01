@@ -6,7 +6,7 @@ const Banner = () => {
     const image = 'https://i.ibb.co.com/1yMzyVK/suncart-banner-bg.png'
     return (
         <div style={{ backgroundImage: image ? `url(${image})` : 'none' }}
-            className="my-5 rounded-xl bg-no-repeat bg-center bg-cover max-sm:h-[50vh] h-[70vh]"
+            className="my-5 rounded bg-no-repeat bg-center bg-cover max-sm:h-[50vh] h-[70vh]"
         >
             <div className="flex items-center justify-around  max-sm:h-[50vh] h-[70vh] ">
                 <div className="space-y-3 ">
