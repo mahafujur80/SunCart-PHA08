@@ -1,6 +1,6 @@
 import {Outfit } from "next/font/google";
 import "./globals.css";
-import NavBar from "../components/NavBar";
+import NavBar from "../components/NavBar/NavBar";
 
 const outfit = Outfit({
   variable: "--font-outfit",
@@ -19,7 +19,7 @@ export default function RootLayout({ children }) {
       lang="en"
       className={`${outfit.className} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">
+      <body className="min-h-full flex flex-col bg-background/70 backdrop-blur-lg">
         <NavBar/>
         <main className="container mx-auto">{children}</main>
       </body>

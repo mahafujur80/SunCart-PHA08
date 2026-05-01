@@ -21,8 +21,8 @@ const NavBar = () => {
     const [isOpen, setIsOpen] = useState(false)
 
     return (
-        <div>
-            <nav className="sticky top-0 z-40 w-full border-b border-separator bg-background/70 backdrop-blur-lg">
+        <div className='bg-background/70 backdrop-blur-lg'>
+            <nav className="container mx-auto sticky top-0 z-40 w-full border-b border-separator ">
                 <header className="flex h-16 items-center justify-between px-6">
                     <div className="flex items-center gap-4">
 
@@ -30,18 +30,18 @@ const NavBar = () => {
                             } transition-all duration-1000 bg-slate-200`}>
                             {navLink}
                         </ul>
-                        <span className='flex  border items-center gap-3'>
+                        <span className='flex items-center gap-3'>
                             {
                                 <button onClick={() => setIsOpen(!isOpen)}> {isOpen ? <IoMdClose className='md:hidden text-2xl' /> : <FiMenu className='md:hidden text-2xl' />}</button>
                             }
-                            <p className="font-bold text-3xl font-bold">Sun<span className='text-blue-500'>Cart</span></p>
+                            <p className="font-bold  lg:text-3xl font-bold">Sun<span className='text-blue-500'>Cart</span></p>
                         </span>
                     </div>
                     <div className="flex items-center gap-4 max-md:hidden">
                         {navLink}
                     </div>
                     <div>
-                        <Link href={`/`}><Button className='text-lg'>Log In</Button></Link>
+                        <Link href={`/`}><Button className='lg:text-lg'>Log In</Button></Link>
                     </div>
                 </header>
             </nav>
