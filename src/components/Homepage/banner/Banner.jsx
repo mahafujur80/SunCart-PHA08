@@ -9,16 +9,16 @@ const Banner = () => {
             className="my-5 rounded-xl bg-no-repeat bg-center bg-cover max-sm:h-[50vh] h-[70vh]"
         >
             <div className="flex items-center justify-around  max-sm:h-[50vh] h-[70vh] ">
-                <div className="space-y-3  ">
-                    <h1 className="text-3xl md:text-5xl font-black text-blue-600">
+                <div className="space-y-3 ">
+                    <h1 className="animate__animated animate__slideInLeft animate__slow text-3xl md:text-5xl font-black text-blue-600">
                         Hot Summer Sale
                     </h1>
 
-                    <h2 className="text-xl md:text-2xl font-semibold text-gray-700">
+                    <h2 className="animate__animated animate__slideInRight animate__slow text-xl md:text-2xl font-semibold text-gray-700">
                         Feel the Summer Vibes
                     </h2>
 
-                    <div className="space-y-1">
+                    <div className="space-y-1 animate__animated animate__slideInLeft animate__slow">
                         <p className="text-gray-600">
                             Flat <span className="font-bold text-pink-500">30% Discount</span>
                         </p>
@@ -29,7 +29,7 @@ const Banner = () => {
                         </p>
                     </div>
 
-                    <Button >
+                    <Button className='animate__animated animate__fadeInUp animate__delay-1s'>
                         Shop Now
                         <GoArrowRight className="animate-pulse" />
                     </Button>

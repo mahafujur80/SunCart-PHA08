@@ -1,0 +1,32 @@
+[
+  {
+    "title": "Skincare Tips",
+    "icon": "🌞",
+    "tips": [
+      { "icon": "☀️", "text": "Use Sunscreen (SPF 30+)" },
+      { "icon": "🧴", "text": "Lightweight Moisturizer" },
+      { "icon": "🧼", "text": "Cleanse Twice Daily" },
+      { "icon": "🧢", "text": "Avoid Peak Sun (12–3 PM)" }
+    ]
+  },
+  {
+    "title": "Hydration Tips",
+    "icon": "💧",
+    "tips": [
+      { "icon": "🥤", "text": "Drink 2–3L Water Daily" },
+      { "icon": "🍉", "text": "Eat Water-rich Foods" },
+      { "icon": "🧃", "text": "Avoid Sugary Drinks" },
+      { "icon": "🧂", "text": "Electrolytes Intake" }
+    ]
+  },
+  {
+    "title": "Daily Comfort Tips",
+    "icon": "👕",
+    "tips": [
+      { "icon": "👕", "text": "Wear Light Cotton Clothes" },
+      { "icon": "🕶️", "text": "Use Sunglasses" },
+      { "icon": "🧴", "text": "Use Body Lotion / Aloe Vera" },
+      { "icon": "🚿", "text": "Take Cool Showers" }
+    ]
+  }
+]

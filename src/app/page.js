@@ -6,8 +6,8 @@ import SummerCareTips from "@/components/Homepage/SummerCareTips/SummerCareTips"
 export default function Home() {
   return (
    <div>
-        <Banner/>
-        <PopularProducts/>
+        {/* <Banner/>
+        <PopularProducts/> */}
         <SummerCareTips/>
    </div>
   );

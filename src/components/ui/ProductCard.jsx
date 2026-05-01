@@ -5,7 +5,7 @@ import { IoIosStar } from 'react-icons/io';
 
 const ProductCard = ({product}) => {
     return (
-        <div className='border rounded-xl p-4'>
+        <div className='border rounded-xl p-4 animate__animated animate__fadeInUp animate__slow'>
             <div>
                 <Image src={product.image} alt={product.name} width={200} height={200}
                 className='w-full rounded-xl object-cover'                              
@@ -13,7 +13,7 @@ const ProductCard = ({product}) => {
             
             </div>
             <div className='space-y-2 mt-5'>
-                <h1 className='md:text-lg lg:text-xl font-semibold'>{product.name}</h1>
+                <h1 className='md:text-xs lg:text-xl font-semibold max-sm:line-clamp-1'>{product.name}</h1>
                 <div className='flex items-center justify-between'>
                     <p className='font-semibold md:text-xs lg:text-xl'>${product.price}</p>
                     <p className='flex max-md:text-xs items-center gap-2'><IoIosStar className='text-xl text-yellow-400' />{product.rating}</p>
