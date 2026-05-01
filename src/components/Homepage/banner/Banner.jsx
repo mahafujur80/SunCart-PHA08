@@ -3,13 +3,13 @@ import { FiArrowUpRight } from "react-icons/fi";
 import { GoArrowRight } from "react-icons/go";
 
 const Banner = () => {
-    const image = 'https://i.ibb.co.com/PsXrYVDt/Chat-GPT-Image-May-1-2026-08-30-16-AM.png'
+    const image = 'https://i.ibb.co.com/1yMzyVK/suncart-banner-bg.png'
     return (
         <div style={{ backgroundImage: image ? `url(${image})` : 'none' }}
             className="my-5 rounded-xl bg-no-repeat bg-center bg-cover max-sm:h-[50vh] h-[70vh]"
         >
-            <div className="flex items-center justify-around py-20 ">
-                <div className="space-y-3">
+            <div className="flex items-center justify-around  max-sm:h-[50vh] h-[70vh] ">
+                <div className="space-y-3  ">
                     <h1 className="text-3xl md:text-5xl font-black text-blue-600">
                         Hot Summer Sale
                     </h1>
@@ -29,7 +29,7 @@ const Banner = () => {
                         </p>
                     </div>
 
-                    <Button className="">
+                    <Button >
                         Shop Now
                         <GoArrowRight className="animate-pulse" />
                     </Button>

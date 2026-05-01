@@ -14,32 +14,6 @@
   },
   {
     "id": 2,
-    "name": "Cooling Water Bottle",
-    "brand": "CoolSip",
-    "price": 20,
-    "rating": 4.5,
-    "stock": 25,
-    "description": "Insulated bottle that keeps your drinks cold for hours.",
-    "image": "https://i.ibb.co.com/8gZVVbvy/jisu-han-V4-DEVYXwd-Yo-unsplash.jpg",
-    "category": "Essentials",
-    "tags": ["summer", "hydration"],
-    "sizes": ["500ml", "1L"]
-  },
-  {
-    "id": 3,
-    "name": "SPF 50 Sunscreen",
-    "brand": "SunCare",
-    "price": 12,
-    "rating": 4.8,
-    "stock": 30,
-    "description": "Protect your skin with high SPF sunscreen.",
-    "image": "https://i.ibb.co.com/4wqmtSSb/photo-sunscreen.avif",
-    "category": "Skincare",
-    "tags": ["spf", "skin", "summer"],
-    "sizes": ["100ml"]
-  },
-  {
-    "id": 4,
     "name": "Straw Beach Hat",
     "brand": "BeachWear",
     "price": 18,
@@ -51,6 +25,32 @@
     "tags": ["beach", "hat", "summer"],
     "sizes": ["M", "L"]
   },
+  {
+      "id": 3,
+      "name": "SPF 50 Sunscreen",
+      "brand": "SunCare",
+      "price": 12,
+      "rating": 4.8,
+      "stock": 30,
+      "description": "Protect your skin with high SPF sunscreen.",
+      "image": "https://i.ibb.co.com/4wqmtSSb/photo-sunscreen.avif",
+      "category": "Skincare",
+      "tags": ["spf", "skin", "summer"],
+      "sizes": ["100ml"]
+    },
+    {
+      "id": 4,
+      "name": "Cooling Water Bottle",
+      "brand": "CoolSip",
+      "price": 20,
+      "rating": 4.5,
+      "stock": 25,
+      "description": "Insulated bottle that keeps your drinks cold for hours.",
+      "image": "https://i.ibb.co.com/8gZVVbvy/jisu-han-V4-DEVYXwd-Yo-unsplash.jpg",
+      "category": "Essentials",
+      "tags": ["summer", "hydration"],
+      "sizes": ["500ml", "1L"]
+    },
   {
     "id": 5,
     "name": "Beach Tote Bag",
