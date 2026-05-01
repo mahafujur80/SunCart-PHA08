@@ -1,5 +1,6 @@
 [
-  {
+  { 
+    "id": 1,
     "title": "Skincare Tips",
     "icon": "🌞",
     "tips": [
@@ -10,6 +11,7 @@
     ]
   },
   {
+    "id":2,
     "title": "Hydration Tips",
     "icon": "💧",
     "tips": [
@@ -20,6 +22,7 @@
     ]
   },
   {
+    "id":3,
     "title": "Daily Comfort Tips",
     "icon": "👕",
     "tips": [
@@ -28,5 +31,16 @@
       { "icon": "🧴", "text": "Use Body Lotion / Aloe Vera" },
       { "icon": "🚿", "text": "Take Cool Showers" }
     ]
-  }
+  },
+  {
+    "id":4,
+    "title": "Outdoor Safety Tips",
+    "icon": "🚶",
+    "tips": [
+      { "icon": "👟", "text": "Wear Breathable Shoes" },
+      { "icon": "🕒", "text": "Avoid Peak Sunlight (12PM-3PM)" },
+      { "icon": "🎒", "text": "Carry a Portable Fan" },
+      { "icon": "🍎", "text": "Keep Light Snacks Handy" }
+    ]
+}
 ]
