@@ -1,7 +1,9 @@
 import ProfileUpdateModal from "@/components/ui/ProfileUpdateModal";
 import { auth } from "@/lib/auth";
+import { Button } from "@heroui/react";
 import { headers } from "next/headers";
 import Image from "next/image";
+import Link from "next/link";
 import { BsFillInfoSquareFill, BsPatchCheckFill } from "react-icons/bs";
 import { FaUserCircle } from "react-icons/fa";
 import { MdDriveFileRenameOutline, MdOutlineEmail, MdOutlineSecurityUpdateGood, MdOutlineUpdate } from "react-icons/md";
@@ -12,11 +14,11 @@ const MyProfilePage = async () => {
         headers: await headers()
     })
     const user = session?.user;
-    console.log({session, user})
+    console.log({ session, user })
 
     return (
-        <div className="max-w-5xl mx-auto min-h-screen flex justify-center items-center ">
-            <div className="max-sm:my-5 rounded-xl hover:shadow-lg shadow-blue-200 shadow bg-slate-50 h-auto w-full lg:w-[50%]">
+        <div className="max-w-5xl mx-auto py-10 flex justify-center items-center ">
+            <div className=" animate__animated animate__bounceInUp animate__slow max-sm:mx-2 border rounded-xl hover:shadow-lg shadow-blue-200 shadow bg-slate-50 h-auto w-[98%] lg:w-[50%]">
                 <div className="w-full h-50">
                     <div className='relative'>
                         <div className="w-full rounded-xl h-30 bg-gradient-to-t from-blue-100 to-blue-300">
@@ -27,35 +29,35 @@ const MyProfilePage = async () => {
                     </div>
                 </div>
                 <div className="py-3 px-5 space-y-10">
-                    <div className="flex max-sm:flex-col items-center justify-between">
+                    <div className="flex max-md:flex-wrap space-y-2 items-center justify-between">
                         <div>
                             <h1 className="flex items-center gap-2  text-xl font-bold"><MdDriveFileRenameOutline /> {user?.name}</h1>
                             <p className=" flex items-center gap-2 text-zinc-500"><MdOutlineEmail /> {user?.email} {user?.emailVerified && <BsPatchCheckFill className="text-blue-500" /> } </p>
                         </div>
                         <div>
-                            <ProfileUpdateModal/>
+                            <Link href="/update-profile" ><Button className="text-xs lg:text-md">Update Profile</Button></Link>
                         </div>
                     </div>
 
                     <div className="grid grid-cols-3 gap-2 text-center">
                         <div className="shadow-md space-y-3 p-2 hover:-translate-y-1 transform transition-all ">
-                            <p className="text-lg text-yellow-500 font-semibold"> Member</p>
-                            <h1 className="text-gray-700"> Status</h1>
+                            <p className="text-lg text-yellow-500 font-semibold text-sm lg:text-md"> Member</p>
+                            <h1 className="text-gray-700 text-xs lg:text-sm"> Status</h1>
                         </div>
                         <div className="shadow-md space-y-3 p-2 hover:-translate-y-1 transform transition-all ">
-                            <p className="text-lg text-green-500 font-semibold">Active</p>
-                            <h1 className="text-gray-700">Account</h1>
+                            <p className="text-lg text-green-500 font-semibold text-sm lg:text-md">Active</p>
+                            <h1 className="text-gray-700 text-xs lg:text-sm">Account</h1>
                         </div>
                         <div className="shadow-md space-y-3 p-2 hover:-translate-y-1 transform transition-all ">
-                            <p className={`text-lg ${user?.emailVerified ? "text-green-500" : "text-red-500"} font-semibold`}>{user?.emailVerified ? "Verified" : "Not Verified"}</p>
-                            <h1 className="text-gray-700">Email Verified</h1>
+                            <p className={`text-lg ${user?.emailVerified ? "text-green-500" : "text-red-500"} font-semibold text-sm lg:text-md`}>{user?.emailVerified ? "Verified" : "No"}</p>
+                            <h1 className="text-gray-700 text-xs lg:text-sm">Email Verified</h1>
                         </div>
                     </div>
                     <div className="space-y-2">
                         <h1 className="text-xl font-bold text-gray-800 flex items-center gap-2">More Info <BsFillInfoSquareFill /></h1>
-                        <p className="flex items-center gap-2 text-zinc-600"><FaUserCircle /> User ID: {user?.id}</p>
-                        <p className="flex items-center gap-2 text-zinc-600"> <MdOutlineSecurityUpdateGood /> Last Updated: {new Date(user?.updatedAt).toLocaleString()}  </p>
-                        <p className="flex items-center gap-2 text-zinc-600"> <MdOutlineUpdate /> Member Since: {new Date(user?.createdAt).toLocaleDateString()}  </p>
+                        <p className="flex items-center gap-2 text-zinc-600 max-md:text-sm"><FaUserCircle /> User ID: {user?.id}</p>
+                        <p className="flex items-center gap-2 text-zinc-600 max-md:text-sm"> <MdOutlineSecurityUpdateGood /> Last Updated: {new Date(user?.updatedAt).toLocaleString()}  </p>
+                        <p className="flex items-center gap-2 text-zinc-600 max-md:text-sm"> <MdOutlineUpdate /> Member Since: {new Date(user?.createdAt).toLocaleDateString()}  </p>
                     </div>
                 </div>
             </div>

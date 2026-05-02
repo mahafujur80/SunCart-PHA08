@@ -2,7 +2,7 @@
 import { authClient } from "@/lib/auth-client";
 import { Button, Description, FieldError, Form, Input, InputGroup, Label, TextField } from "@heroui/react";
 import Link from "next/link";
-import { redirect } from "next/navigation";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 import toast from "react-hot-toast";
 import { BsEye, BsEyeSlash } from "react-icons/bs";
@@ -11,6 +11,7 @@ import { FcGoogle } from "react-icons/fc";
 import { MdRefresh } from "react-icons/md";
 
 const RegisterPage = () => {
+    const router = useRouter();
     const [isVisible, setIsVisible] = useState(false);
     const onSubmit = async (e) => {
         e.preventDefault()
@@ -23,11 +24,14 @@ const RegisterPage = () => {
             password: userData.password, // required
             image: userData.photoUrl,
         });
-        if (error) {
-            toast.error(error.message)
-        } else if (data) {
+
+        if (data) {
+            authClient.signOut();
             toast.success("Registration successful!");
-            redirect('/login');
+            router.push('/login');
+        }
+        else if (error) {
+            toast.error(error.message)
         }
     }
     const handleGoogleSignIn = async () => {
@@ -39,8 +43,8 @@ const RegisterPage = () => {
 
     return (
         <div>
-            <div className="py-10 flex flex-col items-center justify-center min-h-[70vh] border">
-                <div className=" shadow-lg rounded-lg max-sm:mx-2 px-10 py-6">
+            <div className="py-10 flex flex-col items-center justify-center min-h-[70vh] ">
+                <div className=" animate__animated animate__zoomIn shadow-gray-400 shadow-[0_2px_10px_rgba(0,0,0,0.1)] rounded-lg max-sm:w-[98%] px-5 lg:px-10 py-6">
                     <h1 className="text-2xl font-bold text-blue-500 text-center">Register</h1>
                     <Form onSubmit={onSubmit} className="flex lg:w-96 flex-col gap-4" >
                         {/* name */}

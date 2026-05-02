@@ -8,7 +8,7 @@ const ProductsDetailsPage = async ({ params }) => {
     const res = await fetch('https://suncart-e-com.vercel.app/products.json')
     const products = await res.json();
     const targetPd = products.find(pd => pd.id === Number(id));
-    console.log(targetPd, 'pd')
+  
     return (
         <div className="max-w-7xl mx-auto py-10">
             <div className='w-full lg:max-w-[50%] mx-auto  border rounded-xl p-4'>

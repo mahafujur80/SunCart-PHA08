@@ -29,7 +29,7 @@ const NavBar = () => {
                 <header className="flex h-16 items-center justify-between px-6">
                     <div className="flex items-center gap-4">
 
-                        <ul className={`md:hidden flex justify-center gap-5 w-full p-1 absolute top-16 ${isOpen ? 'left-0' : '-left-200'
+                        <ul className={`md:hidden flex w-full justify-center gap-5 w-30  p-2 fixed  top-16 ${isOpen ? 'left-0' : '-left-200'
                             } transition-all duration-500 bg-slate-200`}>
                             {navLink}
                         </ul>

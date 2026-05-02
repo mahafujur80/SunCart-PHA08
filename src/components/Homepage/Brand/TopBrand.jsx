@@ -23,7 +23,7 @@ const TopBrand = () => {
       {brands.map((brand, i) => (
         <div
           key={i}
-          className="flex justify-center flex-col items-center animate__animated animate__zoomInDown mx-2 bg-white rounded-lg shadow p-2">
+          className="flex justify-center flex-col items-center animate__animated animate__zoomInDown animate__delay-2s   mx-2 bg-white rounded-lg shadow p-2">
           <div className="w-38 h-25 flex items-center justify-center">
             <p><Image src={brand.logo} alt={brand.name} width={100} height={100} className="object-contain h-full "/></p>
           </div>
