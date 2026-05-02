@@ -36,7 +36,7 @@ const LoginPage = () => {
     return (
         <div>
             <div className="py-10 flex flex-col items-center justify-center min-h-[70vh] border">
-                <div className="border shadow-lg rounded-lg max-sm:mx-2 px-4 py-6">
+                <div className=" shadow-lg rounded-lg max-sm:mx-2 px-10 py-6">
                     <h1 className="text-2xl font-bold text-blue-500 text-center">Login</h1>
                     <Form onSubmit={onSubmit} className="flex lg:w-96 flex-col gap-4" >
                         {/* email */}

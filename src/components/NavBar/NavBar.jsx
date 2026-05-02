@@ -49,7 +49,7 @@ const NavBar = () => {
                                 className="flex items-center gap-4">
                                 <Avatar>
                                     <Avatar.Image alt={user?.name} src={user?.image} />
-                                    {/* <Avatar.Fallback>{user?.name?.charAt(0)}</Avatar.Fallback> */}
+                                    <Avatar.Fallback>{user?.name?.charAt(0)}</Avatar.Fallback>
                                 </Avatar>
                                 <Button onClick={() => authClient.signOut()} className='lg:text-lg'>Log Out</Button>
                             </div>
