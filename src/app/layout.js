@@ -3,6 +3,7 @@ import "./globals.css";
 import 'animate.css';
 import NavBar from "../components/NavBar/NavBar";
 import Footer from "@/components/Footer/Footer";
+import { Toaster } from "react-hot-toast";
 
 const outfit = Outfit({
   variable: "--font-outfit",
@@ -27,6 +28,7 @@ export default function RootLayout({ children }) {
           {children}
         </main>
         <Footer/>
+        <Toaster position="top-center" reverseOrder={false} />
       </body>
     </html>
   );

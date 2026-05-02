@@ -1,5 +1,6 @@
 'use client'
-import { Button } from '@heroui/react';
+import { authClient } from '@/lib/auth-client';
+import { Avatar, Button, Spinner } from '@heroui/react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import React, { useState } from 'react';
@@ -20,6 +21,8 @@ const NavBar = () => {
     </>
     const [isOpen, setIsOpen] = useState(false)
 
+    const { data: session, isPending } = authClient.useSession();
+    const user = session?.user;
     return (
         <div className='bg-background/70 backdrop-blur-lg'>
             <nav className="container mx-auto sticky top-0 z-40 w-full border-b border-separator ">
@@ -41,7 +44,17 @@ const NavBar = () => {
                         {navLink}
                     </div>
                     <div>
-                        <Link href={`/`}><Button className='lg:text-lg'>Log In</Button></Link>
+                        {
+                            isPending ? <div className="flex items-center gap-4"><Spinner color="accent"/> </div>: user ? <div
+                                className="flex items-center gap-4">
+                                <Avatar>
+                                    <Avatar.Image alt={user?.name} src={user?.image} />
+                                    {/* <Avatar.Fallback>{user?.name?.charAt(0)}</Avatar.Fallback> */}
+                                </Avatar>
+                                <Button onClick={() => authClient.signOut()} className='lg:text-lg'>Log Out</Button>
+                            </div>
+                                : <Link href="/login"><Button className='lg:text-lg'>Log In</Button></Link>
+                        }
                     </div>
                 </header>
             </nav>

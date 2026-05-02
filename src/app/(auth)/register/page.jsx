@@ -1,6 +1,10 @@
 'use client';
+import { authClient } from "@/lib/auth-client";
 import { Button, Description, FieldError, Form, Input, InputGroup, Label, TextField } from "@heroui/react";
+import Link from "next/link";
+import { redirect } from "next/navigation";
 import { useState } from "react";
+import toast from "react-hot-toast";
 import { BsEye, BsEyeSlash } from "react-icons/bs";
 import { FaCheck } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
@@ -8,13 +12,37 @@ import { MdRefresh } from "react-icons/md";
 
 const RegisterPage = () => {
     const [isVisible, setIsVisible] = useState(false);
+    const onSubmit = async (e) => {
+        e.preventDefault()
+        const formData = new FormData(e.target);
+        const userData = Object.fromEntries(formData.entries());
+
+        const { data, error } = await authClient.signUp.email({
+            name: userData.name, // required
+            email: userData.email, // required
+            password: userData.password, // required
+            image: userData.photoUrl,
+        });
+        if (error) {
+            toast.error(error.message)
+        } else if (data) {
+            toast.success("Registration successful!");
+            redirect('/login');
+        }
+    }
+    const handleGoogleSignIn = async () => {
+        const data = await authClient.signIn.social({
+            provider: "google",
+        });
+    }
+
 
     return (
         <div>
             <div className="py-10 flex flex-col items-center justify-center min-h-[70vh] border">
                 <div className="border shadow-lg rounded-lg max-sm:mx-2 px-4 py-6">
-                    <h1 className="text-xl font-bold text-blue-500 text-center">Register</h1>
-                    <Form className="flex lg:w-96 flex-col gap-4" >
+                    <h1 className="text-2xl font-bold text-blue-500 text-center">Register</h1>
+                    <Form onSubmit={onSubmit} className="flex lg:w-96 flex-col gap-4" >
                         {/* name */}
                         <TextField
                             isRequired
@@ -122,9 +150,10 @@ const RegisterPage = () => {
                         <span className="mx-4 text-gray-500 text-sm">OR</span>
                         <div className="flex-grow border-t border-gray-300"></div>
                     </div>
-                    <Button variant="outline" className="w-full">
+                    <Button onClick={handleGoogleSignIn} variant="outline" className="w-full">
                         <FcGoogle />  Continue with Google
                     </Button>
+                    <p className="text-center py-2 text-slate-400">Already have an account? <Link href="/login" className="text-blue-500 hover:underline">Login here</Link></p>
                 </div>
             </div>
         </div>

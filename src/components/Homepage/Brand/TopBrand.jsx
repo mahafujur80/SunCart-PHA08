@@ -7,7 +7,7 @@ import logo6 from '@/assets/brands/brandLogo6.jpg'
 const TopBrand = () => {
     const brands = [
   { name: "ADIDAS", logo: logo1 },
-  { name: "NEVIEA", logo: logo2 },
+  { name: "NIVEA", logo: logo2 },
   { name: "PUMA", logo: logo6 },
   { name: "NIKE", logo: logo5 },
 ];
@@ -25,7 +25,7 @@ const TopBrand = () => {
           key={i}
           className="flex justify-center flex-col items-center animate__animated animate__zoomInDown mx-2 bg-white rounded-lg shadow p-2">
           <div className="w-38 h-25 flex items-center justify-center">
-            <p><Image src={brand.logo} alt={brand.name} width={100} height={80} className="object-contain h-full "/></p>
+            <p><Image src={brand.logo} alt={brand.name} width={100} height={100} className="object-contain h-full "/></p>
           </div>
           <p className="text-center text-xs sm:text-sm md:text-base text-blue-500">
             {brand.name}
