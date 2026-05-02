@@ -39,8 +39,8 @@ const MyProfilePage = async () => {
 
                     <div className="grid grid-cols-3 gap-2 text-center">
                         <div className="shadow-md space-y-3 p-2 hover:-translate-y-1 transform transition-all ">
-                            <p className="text-lg text-yellow-500 font-semibold">Member</p>
-                            <h1 className="text-gray-700">Status</h1>
+                            <p className="text-lg text-yellow-500 font-semibold"> Member</p>
+                            <h1 className="text-gray-700"> Status</h1>
                         </div>
                         <div className="shadow-md space-y-3 p-2 hover:-translate-y-1 transform transition-all ">
                             <p className="text-lg text-green-500 font-semibold">Active</p>
