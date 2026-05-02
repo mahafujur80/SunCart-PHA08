@@ -1,4 +1,5 @@
 import { Button } from "@heroui/react";
+import Link from "next/link";
 import { FiArrowUpRight } from "react-icons/fi";
 import { GoArrowRight } from "react-icons/go";
 
@@ -29,10 +30,12 @@ const Banner = () => {
                         </p>
                     </div>
 
-                    <Button className='animate__animated animate__fadeInUp animate__delay-1s'>
+                    <Link href="/products"> 
+                    <Button className='animate__animated  animate__pulse animate__infinite animate__slow'>
                         Shop Now
                         <GoArrowRight className="animate-pulse" />
                     </Button>
+                    </Link>
                 </div>
                 <div></div>
             </div>
