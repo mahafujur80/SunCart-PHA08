@@ -2,7 +2,7 @@
 import { authClient } from "@/lib/auth-client";
 import { Button, FieldError, Form, Input, InputGroup, Label, TextField } from "@heroui/react";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { useState } from "react";
 import toast from "react-hot-toast";
 import { BsEye, BsEyeSlash } from "react-icons/bs";
@@ -11,7 +11,12 @@ import { FcGoogle } from "react-icons/fc";
 import { MdRefresh } from "react-icons/md";
 
 const LoginPage = () => {
-    const router = useRouter()
+
+    const router = useRouter();
+    const searchParams = useSearchParams();
+    const callbackUrl = searchParams.get("callbackUrl");
+    console.log(callbackUrl)
+
     const [isVisible, setIsVisible] = useState(false);
     const onSubmit = async (e) => {
         e.preventDefault()
@@ -25,7 +30,7 @@ const LoginPage = () => {
         });
         if (data) {
             toast.success("Login successful!");
-            router.push('/')
+            router.push(callbackUrl || "/");
         }
         if (error) {
             toast.error(error.message)

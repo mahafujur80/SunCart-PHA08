@@ -5,15 +5,18 @@ import { NextResponse } from "next/server"
 
 
 export async function proxy(request) {
+    const {pathname} = request.nextUrl
+    const signInUrl = new URL('/login', request.url)
+    signInUrl.searchParams.set('callbackUrl', pathname)
+
     const session = await auth.api.getSession({
         headers: await headers()
     })
-    console.log("Session in proxy:", session); // Debugging line to check session data
 
     if (session) {
         return NextResponse.next(); // Allow the request to proceed if the user is authenticated
     }
-    return NextResponse.redirect(new URL('/login', request.url))
+    return NextResponse.redirect(signInUrl); // Redirect to the login page if the user is not authenticated
 
 }
 
