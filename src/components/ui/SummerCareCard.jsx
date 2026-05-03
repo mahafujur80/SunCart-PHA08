@@ -3,7 +3,7 @@ import React from 'react';
 const SummerCareCard = ({careTips}) => {
 
     return (
-        <div className='shadow-lg p-3 bg-gradient-to-r from-blue-100 to-blue-300 rounded-xl animate__animated animate__fadeInUp animate__slow'>
+        <div className='hover:scale-105 transition duration-300 shadow-lg p-3 bg-gradient-to-r from-blue-100 to-blue-300 rounded-xl animate__animated animate__fadeInUp animate__slow'>
             <h1 className='text-center text-xl font-semibold text-gray-800 ' > {careTips.title}  {careTips.icon}</h1>
             <div className='grid grid-cols-2 gap-x-2'>
                 {careTips.tips.map((tip, index) =>{

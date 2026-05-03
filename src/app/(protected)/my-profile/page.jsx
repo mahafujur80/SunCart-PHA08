@@ -1,4 +1,3 @@
-import ProfileUpdateModal from "@/components/ui/ProfileUpdateModal";
 import { auth } from "@/lib/auth";
 import { Button } from "@heroui/react";
 import { headers } from "next/headers";
@@ -14,7 +13,6 @@ const MyProfilePage = async () => {
         headers: await headers()
     })
     const user = session?.user;
-    console.log({ session, user })
 
     return (
         <div className="max-w-5xl mx-auto py-10 flex justify-center items-center ">

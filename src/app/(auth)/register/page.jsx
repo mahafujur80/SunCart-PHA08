@@ -139,7 +139,7 @@ const RegisterPage = () => {
                         <div className="flex gap-2 mt-4">
                             <Button type="submit" className="w-full" color="primary">
                                 <FaCheck />
-                                Submit
+                                Register
                             </Button>
 
                             <Button type="reset" variant="flat" className="w-full text-red-500">
