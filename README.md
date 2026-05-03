@@ -61,7 +61,8 @@
 
 ### 🚀 Tech Stack
 
-* **Frontend:** Next.js, React
+* **Frontend:** Next.js, React, Tailwind CSS,
+* **Component Lib** Hero Ui
 * **Authentication:** Better Auth
 
 ---

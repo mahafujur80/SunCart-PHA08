@@ -26,7 +26,7 @@ const Footer = () => {
           </div>
 
           <div className='col-span-4'>
-            <h1 className="text-white font-bold text-lg">Social Linkss</h1>
+            <h1 className="text-white font-bold text-lg">Social Links</h1>
             <p className='flex items-center gap-3'> <FaGithub /> <Link className='hover:border-b' href={'https://github.com/mahafujur80'}>GitHub</Link></p>
             <p className='flex items-center gap-3'> <FaLinkedin /><Link className='hover:border-b' href={'https://www.linkedin.com/in/mahafujur-rahman-munna/'}>LinkeIn</Link></p>
             <p className='flex items-center gap-3'> <FaFacebook /> <Link className='hover:border-b' href={'https://www.facebook.com/mahafujurrahman480'}>Facebook</Link></p>
