@@ -14,7 +14,7 @@ const TopBrand = () => {
     return (
        <div className="my-10 space-y-5">
 
-  <h1 className="text-lg md:text-2xl font-black text-center">
+  <h1 className="text-2xl font-black text-center">
     <span className="text-blue-500">Top</span> Brands
   </h1>
 

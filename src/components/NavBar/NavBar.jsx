@@ -16,7 +16,7 @@ const NavBar = () => {
     const pathName = usePathname()
     const navLink = <>
         {
-            navData.map(nav => <Link className={`${pathName === nav.path ? 'border-b-2 border-blue-500' : ''}`} key={nav.id} href={nav.path}>{nav.name}</Link>)
+            navData.map(nav => <Link className={`hover:border-b-2 border-blue-500 ${pathName === nav.path ? 'border-b-2 border-blue-500' : ''}`} key={nav.id} href={nav.path}>{nav.name}</Link>)
         }
     </>
     const [isOpen, setIsOpen] = useState(false)
@@ -25,7 +25,7 @@ const NavBar = () => {
     const user = session?.user;
     return (
         <div className='bg-background/70 backdrop-blur-lg'>
-            <nav className="container mx-auto sticky top-0 z-40 w-full border-b border-separator ">
+            <nav className="animate__animated animate__fadeInDown container mx-auto sticky top-0 z-40 w-full border-b border-separator ">
                 <header className="flex h-16 items-center justify-between px-6">
                     <div className="flex items-center gap-4">
 
@@ -37,7 +37,7 @@ const NavBar = () => {
                             {
                                 <button onClick={() => setIsOpen(!isOpen)}> {isOpen ? <IoMdClose className='md:hidden text-2xl' /> : <FiMenu className='md:hidden text-2xl' />}</button>
                             }
-                            <p className="font-bold  lg:text-3xl font-bold">Sun<span className='text-blue-500'>Cart</span></p>
+                            <p className="font-bold text-xl  lg:text-3xl font-bold">Sun<span className='text-blue-500'>Cart</span></p>
                         </span>
                     </div>
                     <div className="flex items-center gap-4 max-md:hidden">

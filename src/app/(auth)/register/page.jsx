@@ -44,7 +44,7 @@ const RegisterPage = () => {
     return (
         <div>
             <div className="py-10 flex flex-col items-center justify-center min-h-[70vh] ">
-                <div className=" animate__animated animate__zoomIn shadow-gray-400 shadow-[0_2px_10px_rgba(0,0,0,0.1)] rounded-lg max-sm:w-[98%] px-5 lg:px-10 py-6">
+                <div className=" animate__animated animate__zoomIn shadow-gray-400 shadow-[0_2px_10px_rgba(0,0,0,0.1)] rounded-lg max-sm:w-[90%] px-5 lg:px-10 py-6">
                     <h1 className="text-2xl font-bold text-blue-500 text-center">Register</h1>
                     <Form onSubmit={onSubmit} className="flex lg:w-96 flex-col gap-4" >
                         {/* name */}
